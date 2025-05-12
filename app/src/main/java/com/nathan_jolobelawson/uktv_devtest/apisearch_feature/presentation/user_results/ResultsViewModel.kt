@@ -3,7 +3,6 @@ package com.nathan_jolobelawson.uktv_devtest.apisearch_feature.presentation.user
 import android.util.Log
 import androidx.compose.runtime.State
 import androidx.compose.runtime.mutableStateOf
-import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.nathan_jolobelawson.uktv_devtest.apisearch_feature.domain.model.FilmsResultsData

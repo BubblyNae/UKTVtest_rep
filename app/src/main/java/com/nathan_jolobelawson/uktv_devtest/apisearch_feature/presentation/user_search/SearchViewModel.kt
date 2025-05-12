@@ -85,8 +85,6 @@ class SearchViewModel @Inject constructor(
                 )
             }
 
-            // with more time I would like to sort the results with a takeUnless() because right now
-            // there'll be duplicate results
             is SearchResultEvent.OnSearchButtonPressed -> {
                 val _userInputText =
                     UserInputType.checkUserInput((userTextFieldState.value.text.lowercase()))

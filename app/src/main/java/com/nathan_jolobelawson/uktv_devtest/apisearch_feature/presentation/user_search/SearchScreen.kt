@@ -15,10 +15,10 @@ import androidx.compose.material3.Button
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
-import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalSoftwareKeyboardController
 import androidx.compose.ui.unit.dp
 import androidx.core.graphics.ColorUtils
 import androidx.hilt.navigation.compose.hiltViewModel
@@ -33,7 +33,7 @@ fun SearchScreen(
     viewModel: SearchViewModel = hiltViewModel()
 ) {
     val userTextFieldState = viewModel.userTextFieldState.value
-
+    val keyboardController = LocalSoftwareKeyboardController.current
     val scaffoldState = rememberScaffoldState()
 
     LaunchedEffect(key1 = true) {
@@ -89,14 +89,14 @@ fun SearchScreen(
                 )
                 Spacer(modifier = Modifier.height(16.dp))
                 Button(
-                    onClick = { viewModel.onEvent(SearchResultEvent.OnSearchButtonPressed) }
+                    onClick = {
+                        viewModel.onEvent(SearchResultEvent.OnSearchButtonPressed)
+                        keyboardController?.hide()}
                     )
                 {
                     Text("Search")
                 }
             }
         }
-
-
     }
 }

@@ -91,7 +91,7 @@ fun ResultsScreen(
                 .fillMaxSize()
                 .padding(paddingValue)
         ) {
-            Spacer(modifier = Modifier.height(30.dp))
+            Spacer(modifier = Modifier.height(40.dp))
             Row(
                 modifier = Modifier
                     .fillMaxWidth(),

@@ -1,5 +1,5 @@
 # UKTVtest_rep
-My source files for the UKTV Software Developer Interview Task
+My source files for the UKTV Software Developer Interview Task - Nathan Jolobe-Lawson
 
 ## Intro
 Hello! Before talking about some of my decisions on the task, just want to add a few asterisks to the project because the circumstances of the project are rough.
